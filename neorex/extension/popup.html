@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Neo.Rex Assistant</title>
+  <style>
+    body {
+      width: 320px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 16px;
+      color: #1e293b;
+      background: #f8fafc;
+    }
+    h2 { font-size: 16px; margin: 0 0 8px; color: #0f172a; }
+    p { font-size: 13px; color: #64748b; margin: 0 0 16px; }
+    .status-badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      background: #dcfce7;
+      color: #166534;
+      margin-bottom: 12px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      text-align: center;
+      box-sizing: border-box;
+      margin-bottom: 8px;
+    }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #334155;
+    }
+  </style>
+</head>
+<body>
+  <h2>Neo.Rex Portal Assistant</h2>
+  <div class="status-badge" id="backend-status">Checking Backend...</div>
+  <p>Ready to evaluate no-sign-in career pages (Greenhouse, Lever, Ashby, SmartRecruiters) and manage human-in-the-loop review.</p>
+
+  <button class="btn" id="open-drawer-btn">Inspect & Review Active Tab</button>
+  <button class="btn btn-secondary" id="view-dashboard-btn">View Applications Tracker</button>
+
+  <script src="popup.js"></script>
+
+    <div style="text-align: center; margin-top: 16px; font-size: 11px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 8px;">
+      Neo.Rex Engine v2.0 • Created by <a href="https://github.com/vineethyadav110" target="_blank" style="color: #3b82f6; text-decoration: none; font-weight: 600;">Vineeth Yadav</a>
+    </div>
+  </body>
+
+</html>

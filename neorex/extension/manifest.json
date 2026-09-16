@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Neo.Rex - AI Job Evaluator & Review Layer",
+  "version": "1.0.0",
+  "description": "Evaluates job fit, maps form fields, and enforces human-in-the-loop review for no-sign-in career portals.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.greenhouse.io/*",
+    "*://*.lever.co/*",
+    "*://*.ashbyhq.com/*",
+    "*://*.smartrecruiters.com/*",
+    "http://127.0.0.1:8000/*",
+    "*://*.myworkdayjobs.com/*",
+    "*://*.myworkday.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Neo.Rex Assistant"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.greenhouse.io/*",
+        "*://*.lever.co/*",
+        "*://*.ashbyhq.com/*",
+        "*://*.smartrecruiters.com/*",
+        "*://*/*careers*/*",
+        "*://*/*jobs*/*",
+        "*://*.myworkdayjobs.com/*",
+        "*://*.myworkday.com/*"
+      ],
+      "js": [
+        "content_script.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ]
+}
